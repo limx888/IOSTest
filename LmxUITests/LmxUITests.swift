@@ -2,8 +2,8 @@
 //  LmxUITests.swift
 //  LmxUITests
 //
-//  Created by 李明侠 on 2019/3/29.
-//  Copyright © 2019 李明侠. All rights reserved.
+//  Created by Lmx on 2019/3/29.
+//  Copyright © 2019 Lmx. All rights reserved.
 //
 
 import XCTest
