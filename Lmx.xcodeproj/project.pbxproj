@@ -25,6 +25,7 @@
 		6737E94D24443DE7008426C9 /* Pods_Lmx.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6737E94C24443DE7008426C9 /* Pods_Lmx.framework */; };
 		676021EC244432490038921E /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676021EB244432490038921E /* WebViewController.swift */; };
 		676021EE244439820038921E /* SJVideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676021ED244439820038921E /* SJVideoPlayerViewController.swift */; };
+		676F8878247670FB002810EF /* WaterMark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676F8877247670FB002810EF /* WaterMark.swift */; };
 		67994FAD2255955700CB0110 /* PhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67994FAC2255955700CB0110 /* PhotoTableViewCell.swift */; };
 		67994FAF2255957000CB0110 /* PhotosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67994FAE2255957000CB0110 /* PhotosTableViewController.swift */; };
 		67994FB222559E0200CB0110 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 67994FB422559E0200CB0110 /* Localizable.strings */; };
@@ -81,6 +82,7 @@
 		6737E94E24443E11008426C9 /* SJVideoPlayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SJVideoPlayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		676021EB244432490038921E /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		676021ED244439820038921E /* SJVideoPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SJVideoPlayerViewController.swift; sourceTree = "<group>"; };
+		676F8877247670FB002810EF /* WaterMark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterMark.swift; sourceTree = "<group>"; };
 		67994FAC2255955700CB0110 /* PhotoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTableViewCell.swift; sourceTree = "<group>"; };
 		67994FAE2255957000CB0110 /* PhotosTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosTableViewController.swift; sourceTree = "<group>"; };
 		67994FB322559E0200CB0110 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				6724CF33226035BC001E48B0 /* LoadingView.swift */,
+				676F8877247670FB002810EF /* WaterMark.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -191,9 +194,9 @@
 		6726A1CD2254932A003D7BA2 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				6724CF2522603235001E48B0 /* Constants.swift */,
 				6724CF292260334F001E48B0 /* NetworkService.swift */,
 				6724CF2D22603471001E48B0 /* OperationService.swift */,
+				6724CF2522603235001E48B0 /* Constants.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -512,6 +515,7 @@
 				67994FBC2255DAD500CB0110 /* ProfileViewController.swift in Sources */,
 				6730627D224DF7D40057799C /* AppDelegate.swift in Sources */,
 				6724CF2622603235001E48B0 /* Constants.swift in Sources */,
+				676F8878247670FB002810EF /* WaterMark.swift in Sources */,
 				6724CF2E22603471001E48B0 /* OperationService.swift in Sources */,
 				67994FC02255DB7B00CB0110 /* ProfileCollectionViewCell.swift in Sources */,
 				6724CF30226034BC001E48B0 /* Exif.swift in Sources */,

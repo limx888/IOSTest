@@ -64,6 +64,15 @@ class PhotosTableViewController: UITableViewController {
         tableView.refreshControl = feedRefreshControl
 //        tableView.feedRefreshControl = feedRefreshControl
         load()
+        
+        // 添加水印
+        var labels:[String] = [String]()
+        labels.append("用户名：Lmx")
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        dateFormatter.locale = Locale.current
+        labels.append("日期：\(dateFormatter.string(from: Date()))")
+        view.addWaterText(degrees: -30, labels: labels, color: UIColor (red: 229 / 255.0, green: 229 / 255.0, blue: 229 / 255.0, alpha: 1.0), font: UIFont.systemFont(ofSize: 13))
     }
     
     @objc func load(with page: Int = 1) {
