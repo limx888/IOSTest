@@ -1,16 +1,16 @@
 PODS:
   - Masonry (1.1.0)
   - Reachability (3.2)
-  - SJBaseVideoPlayer (3.2.6):
+  - SJBaseVideoPlayer (3.3.9):
     - Masonry
     - Reachability
-    - SJBaseVideoPlayer/AVPlayer (= 3.2.6)
-    - SJBaseVideoPlayer/Common (= 3.2.6)
+    - SJBaseVideoPlayer/AVPlayer (= 3.3.9)
+    - SJBaseVideoPlayer/Common (= 3.3.9)
     - SJUIKit/AttributesFactory (>= 0.0.0.38)
     - SJUIKit/ObserverHelper
     - SJUIKit/Queues
     - SJUIKit/SQLite3
-  - SJBaseVideoPlayer/AVPlayer (3.2.6):
+  - SJBaseVideoPlayer/AVPlayer (3.3.9):
     - Masonry
     - Reachability
     - SJBaseVideoPlayer/Common
@@ -18,7 +18,7 @@ PODS:
     - SJUIKit/ObserverHelper
     - SJUIKit/Queues
     - SJUIKit/SQLite3
-  - SJBaseVideoPlayer/Common (3.2.6):
+  - SJBaseVideoPlayer/Common (3.3.9):
     - Masonry
     - Reachability
     - SJBaseVideoPlayer/ResourceLoader
@@ -26,45 +26,51 @@ PODS:
     - SJUIKit/ObserverHelper
     - SJUIKit/Queues
     - SJUIKit/SQLite3
-  - SJBaseVideoPlayer/ResourceLoader (3.2.6):
+  - SJBaseVideoPlayer/ResourceLoader (3.3.9):
     - Masonry
     - Reachability
     - SJUIKit/AttributesFactory (>= 0.0.0.38)
     - SJUIKit/ObserverHelper
     - SJUIKit/Queues
     - SJUIKit/SQLite3
-  - SJUIKit/AttributesFactory (0.0.0.42):
-    - SJUIKit/AttributesFactory/Deprecated (= 0.0.0.42)
-    - SJUIKit/AttributesFactory/UIKitText (= 0.0.0.42)
-  - SJUIKit/AttributesFactory/Deprecated (0.0.0.42)
-  - SJUIKit/AttributesFactory/UIKitText (0.0.0.42)
-  - SJUIKit/ObserverHelper (0.0.0.42)
-  - SJUIKit/Queues (0.0.0.42)
-  - SJUIKit/SQLite3 (0.0.0.42):
-    - SJUIKit/SQLite3/Core (= 0.0.0.42)
-    - SJUIKit/SQLite3/Protocol (= 0.0.0.42)
-  - SJUIKit/SQLite3/Core (0.0.0.42):
+  - SJUIKit/AttributesFactory (0.0.0.51):
+    - SJUIKit/AttributesFactory/Deprecated (= 0.0.0.51)
+    - SJUIKit/AttributesFactory/UIKitText (= 0.0.0.51)
+  - SJUIKit/AttributesFactory/Deprecated (0.0.0.51)
+  - SJUIKit/AttributesFactory/UIKitText (0.0.0.51)
+  - SJUIKit/ObserverHelper (0.0.0.51)
+  - SJUIKit/Queues (0.0.0.51)
+  - SJUIKit/SQLite3 (0.0.0.51):
+    - SJUIKit/SQLite3/Core (= 0.0.0.51)
+    - SJUIKit/SQLite3/Protocol (= 0.0.0.51)
+    - YYModel
+  - SJUIKit/SQLite3/Core (0.0.0.51):
     - SJUIKit/SQLite3/Protocol
-  - SJUIKit/SQLite3/Protocol (0.0.0.42)
-  - SJVideoPlayer (3.2.4):
-    - SJBaseVideoPlayer (>= 3.2.5)
-    - SJVideoPlayer/Common (= 3.2.4)
-    - SJVideoPlayer/ControlLayers (= 3.2.4)
-    - SJVideoPlayer/ResourceLoader (= 3.2.4)
-  - SJVideoPlayer/Common (3.2.4):
+    - YYModel
+  - SJUIKit/SQLite3/Protocol (0.0.0.51):
+    - YYModel
+  - SJVideoPlayer (3.2.6):
+    - SJBaseVideoPlayer (>= 3.3.3)
+    - SJVideoPlayer/Common (= 3.2.6)
+    - SJVideoPlayer/ControlLayers (= 3.2.6)
+    - SJVideoPlayer/ResourceLoader (= 3.2.6)
+  - SJVideoPlayer/Common (3.2.6):
     - Masonry
-    - SJBaseVideoPlayer (>= 3.2.5)
+    - SJBaseVideoPlayer (>= 3.3.3)
     - SJUIKit/AttributesFactory
     - SJVideoPlayer/ResourceLoader
-  - SJVideoPlayer/ControlLayers (3.2.4):
-    - SJBaseVideoPlayer (>= 3.2.5)
+  - SJVideoPlayer/ControlLayers (3.2.6):
+    - SJBaseVideoPlayer (>= 3.3.3)
     - SJVideoPlayer/Common
-  - SJVideoPlayer/ResourceLoader (3.2.4):
-    - SJBaseVideoPlayer (>= 3.2.5)
+  - SJVideoPlayer/ResourceLoader (3.2.6):
+    - SJBaseVideoPlayer (>= 3.3.3)
+  - SnapKit (5.0.1)
+  - YYModel (1.0.4)
 
 DEPENDENCIES:
   - SJBaseVideoPlayer
   - SJVideoPlayer
+  - SnapKit
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -73,14 +79,18 @@ SPEC REPOS:
     - SJBaseVideoPlayer
     - SJUIKit
     - SJVideoPlayer
+    - SnapKit
+    - YYModel
 
 SPEC CHECKSUMS:
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
-  SJBaseVideoPlayer: 6d12484e40ae56aeb7cd33d4c8588adb7e113798
-  SJUIKit: 1356488a2488a9aafeddaf6a098006277c0eb9b8
-  SJVideoPlayer: acee9fab2b384fc87ed7636c05977d8dd3cdb4ee
+  SJBaseVideoPlayer: 7ee5c057a5917834ecacaf33cf5d10e199d3ea6f
+  SJUIKit: bdf86af3648e70483c57e2bfe2fcc7531337fa54
+  SJVideoPlayer: fb53250dbf0ad2f95c963e9a42efb2057b9e9f27
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: 0d8ee80b570b38737f8747153b37b9947d92a98a
+PODFILE CHECKSUM: bd9455b29219f8167df28f69168e4c02b68ff0d2
 
 COCOAPODS: 1.9.1

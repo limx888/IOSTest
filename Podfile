@@ -10,6 +10,7 @@ target 'Lmx' do
   # Pods for Lmx
   # Player with default control layer.
   pod 'SJVideoPlayer'
+  pod 'SnapKit'
 
   # The base player, without the control layer, can be used if you need a custom control layer.
   pod 'SJBaseVideoPlayer'

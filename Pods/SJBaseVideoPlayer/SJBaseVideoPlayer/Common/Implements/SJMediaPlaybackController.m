@@ -32,6 +32,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface SJMediaPlayerTimeObserverItem : NSObject
 - (instancetype)initWithInterval:(NSTimeInterval)interval player:(__weak id<SJMediaPlayer>)player currentTimeDidChangeExeBlock:(nonnull void (^)(NSTimeInterval time))currentTimeDidChangeExeBlock playableDurationDidChangeExeBlock:(nonnull void (^)(NSTimeInterval time))playableDurationDidChangeExeBlock durationDidChangeExeBlock:(nonnull void (^)(NSTimeInterval time))durationDidChangeExeBlock;
 - (void)invalidate;
+- (void)stop;
 @end
 
 @implementation SJMediaPlayerTimeObserverItem {
@@ -95,6 +96,13 @@ NS_ASSUME_NONNULL_BEGIN
         _timer.fireDate = [NSDate dateWithTimeIntervalSinceNow:_interval];
         [NSRunLoop.mainRunLoop addTimer:_timer forMode:NSRunLoopCommonModes];
     }
+}
+
+- (void)stop {
+    [self invalidate];
+    if ( _playableDurationDidChangeExeBlock ) _playableDurationDidChangeExeBlock(0);
+    if ( _currentTimeDidChangeExeBlock ) _currentTimeDidChangeExeBlock(0);
+    if ( _durationDidChangeExeBlock ) _durationDidChangeExeBlock(0);
 }
  
 - (void)_refresh {
@@ -160,10 +168,7 @@ NS_ASSUME_NONNULL_BEGIN
 #ifdef DEBUG
     NSLog(@"%d - %s", (int)__LINE__, __func__);
 #endif
-    UIView *playerView = _playerView;
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [playerView removeFromSuperview];
-    });
+    [_playerView performSelectorOnMainThread:@selector(removeFromSuperview) withObject:nil waitUntilDone:YES];
     [NSNotificationCenter.defaultCenter removeObserver:self];
 }
 
@@ -232,18 +237,31 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)replay {
-    [self play];
+    if ( self.assetStatus == SJAssetStatusFailed ) {
+        [self refresh];
+        return;
+    }
+    
+    if ( self.currentPlayer == nil ) {
+        return;
+    }
+    
+    self.reasonForWaitingToPlay = SJWaitingWhileEvaluatingBufferingRateReason;
+    self.timeControlStatus = SJPlaybackTimeControlStatusWaitingToPlay;
+    [self.currentPlayer replay];
+    [self _toEvaluating];
 }
 
 - (void)stop {
     [_definitionMediaPlayerLoader cancel];
     _definitionMediaPlayerLoader = nil;
     _definitionMedia = nil;
-    [self _removePeriodicTimeObserver];
     [self.currentPlayerView removeFromSuperview];
     _playerView.view = nil;
     self.currentPlayer = nil;
     _media = nil;
+    [_periodicTimeObserver stop];
+    [self _removePeriodicTimeObserver];
     if ( self.timeControlStatus != SJPlaybackTimeControlStatusPaused )
         self.timeControlStatus = SJPlaybackTimeControlStatusPaused;
 }
@@ -329,7 +347,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (NSTimeInterval)currentTime {
-    return _currentPlayer.currentTime;
+    return _currentPlayer.seekingInfo.isSeeking ? CMTimeGetSeconds(_currentPlayer.seekingInfo.time) : _currentPlayer.currentTime;
 }
 
 - (NSTimeInterval)duration {
@@ -536,6 +554,7 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)_removePeriodicTimeObserver {
+    [_periodicTimeObserver invalidate];
     _periodicTimeObserver = nil;
 }
 

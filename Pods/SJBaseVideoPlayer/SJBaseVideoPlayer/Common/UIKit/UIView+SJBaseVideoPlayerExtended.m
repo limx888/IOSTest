@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// 子视图是否显示中
 ///
 - (BOOL)isViewAppeared:(UIView *_Nullable)childView {
+    if ( !childView ) return NO;
     return !CGRectIsEmpty([self intersectionWithView:childView]);
 }
 
@@ -36,6 +37,29 @@ NS_ASSUME_NONNULL_BEGIN
         next = next.nextResponder;
     }
     return next;
+}
+
+///
+/// 寻找实现了该协议的视图, 包括自己
+///
+- (__kindof UIView *_Nullable)viewWithProtocol:(Protocol *)protocol {
+    if ( [self conformsToProtocol:protocol] ) {
+        return self;
+    }
+    
+    for ( UIView *subview in self.subviews ) {
+        UIView *target = [subview viewWithProtocol:protocol];
+        if ( target != nil ) return target;
+    }
+    return nil;
+}
+
+
+///
+/// 对应视图是否在window中显示
+///
+- (BOOL)isViewAppearedWithProtocol:(Protocol *)protocol {
+   return [self isViewAppeared:[self viewWithProtocol:protocol]];
 }
 
 - (void)setSj_x:(CGFloat)sj_x {

@@ -25,11 +25,15 @@ class PhotosTableViewController: UITableViewController {
     
     /* SJVideoPlayer播放视频 */
     @IBAction func RightButton(_ sender: Any) {
-        let videoPlayerView: SJVideoPlayerViewController = SJVideoPlayerViewController()
-        videoPlayerView.modalPresentationStyle = .fullScreen //设置为全屏即可
-        videoPlayerView.url = "http://1253131631.vod2.myqcloud.com/26f327f9vodgzp1253131631/f4c0c9e59031868222924048327/f0.mp4"
-        videoPlayerView.hidesBottomBarWhenPushed = true
-        navigationController?.pushViewController(videoPlayerView, animated: true)
+//        let videoPlayerView: SJVideoPlayerViewController = SJVideoPlayerViewController()
+//        videoPlayerView.modalPresentationStyle = .fullScreen //设置为全屏即可
+//        videoPlayerView.url = "http://1253131631.vod2.myqcloud.com/26f327f9vodgzp1253131631/f4c0c9e59031868222924048327/f0.mp4"
+//        videoPlayerView.hidesBottomBarWhenPushed = true
+//        navigationController?.pushViewController(videoPlayerView, animated: true)
+        // tableview自适应布局
+        let auteurView: AuteurTableViewController = AuteurTableViewController()
+        navigationController?.pushViewController(auteurView, animated: true)
+        
     }
     
     private var loadingView: LoadingView! {

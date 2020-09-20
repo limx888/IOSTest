@@ -7,7 +7,25 @@
 		<key>Lmx.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>8</integer>
+			<integer>10</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>67306278224DF7D40057799C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6730628C224DF7D60057799C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>67306297224DF7D60057799C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

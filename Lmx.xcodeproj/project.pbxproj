@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		124AD54B8FB2C8F71EC5E58F /* Pods_Lmx_LmxUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C6EAE1D8F6CF04FCB1BC43A /* Pods_Lmx_LmxUITests.framework */; };
+		6711193625148A9700BEAA2F /* AuteurTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6711193425148A9700BEAA2F /* AuteurTableViewCell.swift */; };
+		6711193725148A9700BEAA2F /* AuteurTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6711193525148A9700BEAA2F /* AuteurTableViewCell.xib */; };
+		6711193925148E2100BEAA2F /* AuteurTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6711193825148E2100BEAA2F /* AuteurTableViewController.swift */; };
 		6724CF24226029F8001E48B0 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6724CF23226029F8001E48B0 /* Info.plist */; };
 		6730627D224DF7D40057799C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6730627C224DF7D40057799C /* AppDelegate.swift */; };
 		67306282224DF7D40057799C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67306280224DF7D40057799C /* Main.storyboard */; };
@@ -56,6 +59,9 @@
 		38FE6885738BD18501DBF05D /* Pods-Lmx.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lmx.release.xcconfig"; path = "Target Support Files/Pods-Lmx/Pods-Lmx.release.xcconfig"; sourceTree = "<group>"; };
 		5C49E647ECC3F33ECA59AE20 /* Pods-LmxTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LmxTests.debug.xcconfig"; path = "Target Support Files/Pods-LmxTests/Pods-LmxTests.debug.xcconfig"; sourceTree = "<group>"; };
 		66EC0E08BDBE3B7202BC207D /* Pods-Lmx-LmxUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lmx-LmxUITests.release.xcconfig"; path = "Target Support Files/Pods-Lmx-LmxUITests/Pods-Lmx-LmxUITests.release.xcconfig"; sourceTree = "<group>"; };
+		6711193425148A9700BEAA2F /* AuteurTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuteurTableViewCell.swift; sourceTree = "<group>"; };
+		6711193525148A9700BEAA2F /* AuteurTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuteurTableViewCell.xib; sourceTree = "<group>"; };
+		6711193825148E2100BEAA2F /* AuteurTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuteurTableViewController.swift; sourceTree = "<group>"; };
 		6724CED0225F2341001E48B0 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.storyboard"; sourceTree = "<group>"; };
 		6724CED1225F2341001E48B0 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hans"; path = "zh-Hans.lproj/Main.storyboard"; sourceTree = "<group>"; };
 		6724CED3225F2345001E48B0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -158,6 +164,9 @@
 				67994FBF2255DB7B00CB0110 /* ProfileCollectionViewCell.swift */,
 				676021EB244432490038921E /* WebViewController.swift */,
 				676021ED244439820038921E /* SJVideoPlayerViewController.swift */,
+				6711193425148A9700BEAA2F /* AuteurTableViewCell.swift */,
+				6711193525148A9700BEAA2F /* AuteurTableViewCell.xib */,
+				6711193825148E2100BEAA2F /* AuteurTableViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -388,6 +397,7 @@
 				67306284224DF7D60057799C /* Assets.xcassets in Resources */,
 				6724CF24226029F8001E48B0 /* Info.plist in Resources */,
 				67306282224DF7D40057799C /* Main.storyboard in Resources */,
+				6711193725148A9700BEAA2F /* AuteurTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -517,6 +527,7 @@
 			files = (
 				6796C21F248A3237009ED7CD /* Photo.swift in Sources */,
 				6796C22B248A347B009ED7CD /* Misc.swift in Sources */,
+				6711193625148A9700BEAA2F /* AuteurTableViewCell.swift in Sources */,
 				67994FAD2255955700CB0110 /* PhotoTableViewCell.swift in Sources */,
 				676021EE244439820038921E /* SJVideoPlayerViewController.swift in Sources */,
 				67994FBC2255DAD500CB0110 /* ProfileViewController.swift in Sources */,
@@ -529,6 +540,7 @@
 				67994FC02255DB7B00CB0110 /* ProfileCollectionViewCell.swift in Sources */,
 				676021EC244432490038921E /* WebViewController.swift in Sources */,
 				6796C21A248A3221009ED7CD /* OperationService.swift in Sources */,
+				6711193925148E2100BEAA2F /* AuteurTableViewController.swift in Sources */,
 				6796C221248A3237009ED7CD /* Exif.swift in Sources */,
 				67994FAF2255957000CB0110 /* PhotosTableViewController.swift in Sources */,
 			);
@@ -720,9 +732,20 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A34699F51AD280F734F8AC63 /* Pods-Lmx.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)/**",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Masonry/Masonry.framework/Headers\"/**",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Reachability/Reachability.framework/Headers\"/**",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SJBaseVideoPlayer/SJBaseVideoPlayer.framework/Headers\"/**",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SJUIKit/SJUIKit.framework/Headers\"/**",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SJVideoPlayer/SJVideoPlayer.framework/Headers\"/**",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SnapKit/SnapKit.framework/Headers\"/**",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/YYModel/YYModel.framework/Headers\"/**",
+				);
 				INFOPLIST_FILE = Lmx/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -739,9 +762,20 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 38FE6885738BD18501DBF05D /* Pods-Lmx.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)/**",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Masonry/Masonry.framework/Headers\"/**",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/Reachability/Reachability.framework/Headers\"/**",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SJBaseVideoPlayer/SJBaseVideoPlayer.framework/Headers\"/**",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SJUIKit/SJUIKit.framework/Headers\"/**",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SJVideoPlayer/SJVideoPlayer.framework/Headers\"/**",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SnapKit/SnapKit.framework/Headers\"/**",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/YYModel/YYModel.framework/Headers\"/**",
+				);
 				INFOPLIST_FILE = Lmx/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
