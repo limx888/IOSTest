@@ -16,11 +16,15 @@ class PhotosTableViewController: UITableViewController {
     
     /* WebView播放视频 */
     @IBAction func LeftButton(_ sender: Any) {
-        let webVC: WebViewController = WebViewController()
-        webVC.modalPresentationStyle = .fullScreen //设置为全屏即可
-        webVC.url = "http://vfx.mtime.cn/Video/2019/03/19/mp4/190319212559089721.mp4"
-        webVC.hidesBottomBarWhenPushed = true
-        navigationController?.pushViewController(webVC, animated: true)
+//        let webVC: WebViewController = WebViewController()
+//        webVC.modalPresentationStyle = .fullScreen //设置为全屏即可
+//        webVC.url = "http://vfx.mtime.cn/Video/2019/03/19/mp4/190319212559089721.mp4"
+//        webVC.hidesBottomBarWhenPushed = true
+//        navigationController?.pushViewController(webVC, animated: true)
+        
+        
+        let viewNext: ViewControllerCollectionView1 = ViewControllerCollectionView1()
+        navigationController?.pushViewController(viewNext, animated: true)
     }
     
     /* SJVideoPlayer播放视频 */
