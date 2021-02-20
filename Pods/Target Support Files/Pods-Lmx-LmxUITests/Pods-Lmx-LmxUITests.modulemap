@@ -1,6 +1,0 @@
-framework module Pods_Lmx_LmxUITests {
-  umbrella header "Pods-Lmx-LmxUITests-umbrella.h"
-
-  export *
-  module * { export * }
-}
