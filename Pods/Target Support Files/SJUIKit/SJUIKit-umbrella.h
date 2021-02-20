@@ -20,6 +20,7 @@
 #import "SJUTRangeHandler.h"
 #import "SJUTRecorder.h"
 #import "SJUTRegexHandler.h"
+#import "SJUTUtils.h"
 #import "NSObject+SJObserverHelper.h"
 #import "SJPresentationQueue.h"
 #import "SJQueue.h"

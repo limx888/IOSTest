@@ -398,7 +398,7 @@ static NSString *kTimeControlStatus = @"timeControlStatus";
         
         if ( self.needSeekToStartPosition && !self.seekingInfo.isSeeking && assetStatus == SJAssetStatusReadyToPlay ) {
             __weak typeof(self) _self = self;
-            [self seekToTime:CMTimeMakeWithSeconds(self.startPosition, NSEC_PER_SEC) completionHandler:^(BOOL finished) {
+            [self seekToTime:CMTimeMakeWithSeconds(self.startPosition, NSEC_PER_SEC) toleranceBefore:kCMTimeZero toleranceAfter:kCMTimeZero completionHandler:^(BOOL f) {
                 __strong typeof(_self) self = _self;
                 if ( !self ) return;
                 self.needSeekToStartPosition = NO;
@@ -545,15 +545,6 @@ static NSString *kTimeControlStatus = @"timeControlStatus";
         self.finishedReason = SJFinishedReasonToTrialEndPosition;
         self.isPlaybackFinished = YES;
         [self pause];
-    }
-}
-
-- (void)_didPlayToEndPositoion {
-    if ( self.finishedReason != SJFinishedReasonToEndTimePosition ) {
-        self.finishedReason = SJFinishedReasonToEndTimePosition;
-        self.isPlaybackFinished = YES;
-        self.reasonForWaitingToPlay = nil;
-        self.timeControlStatus = SJPlaybackTimeControlStatusPaused;
     }
 }
 

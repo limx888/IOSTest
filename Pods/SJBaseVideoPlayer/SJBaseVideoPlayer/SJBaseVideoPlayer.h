@@ -24,7 +24,7 @@
 #import "SJDeviceVolumeAndBrightnessManagerDefines.h"
 #import "SJFloatSmallViewControllerDefines.h"
 #import "SJVideoDefinitionSwitchingInfo.h"
-#import "SJPopPromptControllerDefines.h"
+#import "SJPromptPopupControllerDefines.h"
 #import "SJPlaybackObservation.h"
 #import "SJVideoPlayerPresentViewDefines.h"
 #import "SJSubtitlesPromptControllerDefines.h"
@@ -122,7 +122,7 @@ NS_ASSUME_NONNULL_BEGIN
 ///         此模块将是对视频播放的控制, 例如播放, 暂停, 调速, 跳转等等...
 ///         了解更多请前往协议头文件查看
 ///
-@property (nonatomic, strong, null_resettable) id<SJVideoPlayerPlaybackController> playbackController;
+@property (nonatomic, strong, null_resettable) __kindof id<SJVideoPlayerPlaybackController> playbackController;
 
 ///
 /// 观察者
@@ -390,7 +390,7 @@ NS_ASSUME_NONNULL_BEGIN
 ///
 ///         了解更多请前往协议头文件查看
 ///
-@property (nonatomic, strong, null_resettable) id<SJPopPromptController> popPromptController;
+@property (nonatomic, strong, null_resettable) id<SJPromptPopupController> promptPopupController;
 @end
 
 
@@ -715,6 +715,13 @@ NS_ASSUME_NONNULL_BEGIN
 ///     // 3. 设置双击小浮窗执行的block
 ///     _player.floatSmallViewController.doubleTappedOnTheFloatViewExeBlock = ...;
 ///
+///     // more
+/// #import <SJBaseVideoPlayer/SJFloatSmallViewController.h>
+///
+///     SJFloatSmallViewController *floatSmallViewController = _player.floatSmallViewController;
+///     floatSmallViewController.layoutPosition = SJFloatViewLayoutPositionTopRight;
+///     floatSmallViewController.layoutInsets = UIEdgeInsetsMake(20, 12, 20, 12);
+///     floatSmallViewController.layoutSize = CGSize(300, 300 * 9 / 16.0);
 /// \endcode
 ///
 @property (nonatomic, strong, null_resettable) id<SJFloatSmallViewController> floatSmallViewController;
@@ -724,7 +731,7 @@ NS_ASSUME_NONNULL_BEGIN
 ///
 /// - default value is YES.
 ///
-@property (nonatomic) BOOL autoDisappearFloatSmallView;
+@property (nonatomic, getter=isHiddenFloatSmallViewWhenPlaybackFinished) BOOL hiddenFloatSmallViewWhenPlaybackFinished;
 
 ///
 /// 滚动出去后, 是否暂停. 默认为YES
@@ -860,6 +867,7 @@ NS_ASSUME_NONNULL_BEGIN
 ///
 @property (nonatomic, strong, nullable) UIView<SJWatermarkView> *watermarkView;
 
+- (void)updateWatermarkViewLayout;
 @end
 
 #pragma mark - 已弃用
