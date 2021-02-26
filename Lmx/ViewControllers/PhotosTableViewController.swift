@@ -23,7 +23,11 @@ class PhotosTableViewController: UITableViewController {
 //        navigationController?.pushViewController(webVC, animated: true)
         
         
-        let viewNext: ViewControllerCollectionView1 = ViewControllerCollectionView1()
+//        let viewNext: ViewControllerCollectionView1 = ViewControllerCollectionView1()
+//        navigationController?.pushViewController(viewNext, animated: true)
+        
+        // H5与原生交互
+        let viewNext: JSBridgeViewController = JSBridgeViewController()
         navigationController?.pushViewController(viewNext, animated: true)
     }
     

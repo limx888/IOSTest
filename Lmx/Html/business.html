@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			var u = navigator.userAgent;
+			var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
+			var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+			
+			window.onload = function(){
+				if (isAndroid) {
+					bridge.init();
+				}
+				
+				bridge.registerhandler('businessScanRes', (data, responseCallback) => {
+					console.log(data);
+					responseCallback("businessScanRes callback: " + JSON.stringify(data))//把值返回给原生
+				})
+			}
+			function scan(){
+				let inputEle = document.getElementById('input');
+				let str = inputEle.value;
+				let data = {};
+				data.name = str;
+				bridge.callhandler ('businessScan', data, (res) => {
+					// 处理返回数据
+				})
+			}
+			function setupWebViewJavascriptBridge (callback) {
+				if (isAndroid) {
+					 if (window.WebViewJavascriptBridge) {
+						 callback(WebViewJavascriptBridge)
+					 } else {
+						 document.addEventListener(
+							 'WebViewJavascriptBridgeReady'
+							 , function () {
+								 callback(WebViewJavascriptBridge)
+							 },
+							 false
+						 );
+					 }
+					 return;
+				}
+				if (isiOS) {
+					 if (window.WebViewJavascriptBridge) {
+						 return callback(WebViewJavascriptBridge);
+					 }
+					 if (window.WVJBCallbacks) {
+						 return window.WVJBCallbacks.push(callback);
+					 }
+					 window.WVJBCallbacks = [callback];
+					 var WVJBIframe = document.createElement('iframe');
+					 WVJBIframe.style.display = 'none';
+					 WVJBIframe.src = 'https://__bridge_loaded__';
+					 document.documentElement.appendChild(WVJBIframe);
+					 setTimeout(function () {
+						 document.documentElement.removeChild(WVJBIframe)
+					 }, 0)
+				}
+			}
+			var bridge = {
+			    callhandler (name, data, callback) {
+			      setupWebViewJavascriptBridge(function (bridge) {
+			        bridge.callHandler(name, data, callback)
+			      })
+			    },
+			    registerhandler (name, callback) {
+			      setupWebViewJavascriptBridge(function (bridge) {
+			        bridge.registerHandler(name, function (data, responseCallback) {
+			          callback(data, responseCallback)
+			        })
+			      })
+			    },
+				init () {
+					setupWebViewJavascriptBridge(function (bridge) {
+					  bridge.init(function (message, responseCallback) {
+					  	console.log('Bridge init', message);
+					  	responseCallback('bridge init: ' + JSON.stringify(message));
+					  });
+					})
+				}
+			  }
+		</script>
+	</head>
+	<body>
+		<div>
+			<h2>webview</h2>
+			<input type="text" id="input" />
+			<button onclick="scan()">点我</button>
+		</div>
+	</body>
+</html>

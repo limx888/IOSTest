@@ -21,6 +21,12 @@
 		6737E94D24443DE7008426C9 /* Pods_Lmx.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6737E94C24443DE7008426C9 /* Pods_Lmx.framework */; };
 		676021EC244432490038921E /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676021EB244432490038921E /* WebViewController.swift */; };
 		676021EE244439820038921E /* SJVideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676021ED244439820038921E /* SJVideoPlayerViewController.swift */; };
+		677409F125E3895B003BBE06 /* WebViewJavascriptBridgeBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 677409E925E3895B003BBE06 /* WebViewJavascriptBridgeBase.m */; };
+		677409F225E3895B003BBE06 /* WKWebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 677409EA25E3895B003BBE06 /* WKWebViewJavascriptBridge.m */; };
+		677409F325E3895B003BBE06 /* WebViewJavascriptBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 677409EB25E3895B003BBE06 /* WebViewJavascriptBridge.m */; };
+		677409F425E3895B003BBE06 /* WebViewJavascriptBridge_JS.m in Sources */ = {isa = PBXBuildFile; fileRef = 677409EE25E3895B003BBE06 /* WebViewJavascriptBridge_JS.m */; };
+		677409FE25E497E6003BBE06 /* JSBridgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 677409FD25E497E6003BBE06 /* JSBridgeViewController.swift */; };
+		67740A0125E49939003BBE06 /* business.html in Resources */ = {isa = PBXBuildFile; fileRef = 67740A0025E49939003BBE06 /* business.html */; };
 		6796C21A248A3221009ED7CD /* OperationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6796C218248A3221009ED7CD /* OperationService.swift */; };
 		6796C21B248A3221009ED7CD /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6796C219248A3221009ED7CD /* NetworkService.swift */; };
 		6796C21F248A3237009ED7CD /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6796C21C248A3237009ED7CD /* Photo.swift */; };
@@ -84,6 +90,16 @@
 		6737E94E24443E11008426C9 /* SJVideoPlayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SJVideoPlayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		676021EB244432490038921E /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		676021ED244439820038921E /* SJVideoPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SJVideoPlayerViewController.swift; sourceTree = "<group>"; };
+		677409E925E3895B003BBE06 /* WebViewJavascriptBridgeBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridgeBase.m; sourceTree = "<group>"; };
+		677409EA25E3895B003BBE06 /* WKWebViewJavascriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKWebViewJavascriptBridge.m; sourceTree = "<group>"; };
+		677409EB25E3895B003BBE06 /* WebViewJavascriptBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridge.m; sourceTree = "<group>"; };
+		677409EC25E3895B003BBE06 /* WebViewJavascriptBridge_JS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridge_JS.h; sourceTree = "<group>"; };
+		677409ED25E3895B003BBE06 /* WebViewJavascriptBridgeBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridgeBase.h; sourceTree = "<group>"; };
+		677409EE25E3895B003BBE06 /* WebViewJavascriptBridge_JS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewJavascriptBridge_JS.m; sourceTree = "<group>"; };
+		677409EF25E3895B003BBE06 /* WebViewJavascriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewJavascriptBridge.h; sourceTree = "<group>"; };
+		677409F025E3895B003BBE06 /* WKWebViewJavascriptBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKWebViewJavascriptBridge.h; sourceTree = "<group>"; };
+		677409FD25E497E6003BBE06 /* JSBridgeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSBridgeViewController.swift; sourceTree = "<group>"; };
+		67740A0025E49939003BBE06 /* business.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = business.html; sourceTree = "<group>"; };
 		6796C218248A3221009ED7CD /* OperationService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationService.swift; sourceTree = "<group>"; };
 		6796C219248A3221009ED7CD /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		6796C21C248A3237009ED7CD /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
@@ -165,6 +181,7 @@
 		6726A1C7225491E7003D7BA2 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				677409FD25E497E6003BBE06 /* JSBridgeViewController.swift */,
 				67994FAC2255955700CB0110 /* PhotoTableViewCell.swift */,
 				67994FAE2255957000CB0110 /* PhotosTableViewController.swift */,
 				67994FBB2255DAD500CB0110 /* ProfileViewController.swift */,
@@ -244,6 +261,8 @@
 		6730627B224DF7D40057799C /* Lmx */ = {
 			isa = PBXGroup;
 			children = (
+				677409FF25E49924003BBE06 /* Html */,
+				677409D725E388D6003BBE06 /* Modules */,
 				67C9E82225DFB488002D4D38 /* App */,
 				6796C229248A3455009ED7CD /* Utils */,
 				6796C226248A3305009ED7CD /* Constants */,
@@ -274,6 +293,37 @@
 				6730629E224DF7D60057799C /* Info.plist */,
 			);
 			path = LmxUITests;
+			sourceTree = "<group>";
+		};
+		677409D725E388D6003BBE06 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				677409E825E3895B003BBE06 /* WebViewJavascriptBridge */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		677409E825E3895B003BBE06 /* WebViewJavascriptBridge */ = {
+			isa = PBXGroup;
+			children = (
+				677409E925E3895B003BBE06 /* WebViewJavascriptBridgeBase.m */,
+				677409EA25E3895B003BBE06 /* WKWebViewJavascriptBridge.m */,
+				677409EB25E3895B003BBE06 /* WebViewJavascriptBridge.m */,
+				677409EC25E3895B003BBE06 /* WebViewJavascriptBridge_JS.h */,
+				677409ED25E3895B003BBE06 /* WebViewJavascriptBridgeBase.h */,
+				677409EE25E3895B003BBE06 /* WebViewJavascriptBridge_JS.m */,
+				677409EF25E3895B003BBE06 /* WebViewJavascriptBridge.h */,
+				677409F025E3895B003BBE06 /* WKWebViewJavascriptBridge.h */,
+			);
+			path = WebViewJavascriptBridge;
+			sourceTree = "<group>";
+		};
+		677409FF25E49924003BBE06 /* Html */ = {
+			isa = PBXGroup;
+			children = (
+				67740A0025E49939003BBE06 /* business.html */,
+			);
+			path = Html;
 			sourceTree = "<group>";
 		};
 		6796C226248A3305009ED7CD /* Constants */ = {
@@ -417,6 +467,7 @@
 				6724CF24226029F8001E48B0 /* Info.plist in Resources */,
 				67306282224DF7D40057799C /* Main.storyboard in Resources */,
 				6711193725148A9700BEAA2F /* AuteurTableViewCell.xib in Resources */,
+				67740A0125E49939003BBE06 /* business.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -545,13 +596,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				6796C21F248A3237009ED7CD /* Photo.swift in Sources */,
+				677409F325E3895B003BBE06 /* WebViewJavascriptBridge.m in Sources */,
 				6796C22B248A347B009ED7CD /* Misc.swift in Sources */,
 				6711193625148A9700BEAA2F /* AuteurTableViewCell.swift in Sources */,
+				677409FE25E497E6003BBE06 /* JSBridgeViewController.swift in Sources */,
 				67994FAD2255955700CB0110 /* PhotoTableViewCell.swift in Sources */,
 				676021EE244439820038921E /* SJVideoPlayerViewController.swift in Sources */,
 				67994FBC2255DAD500CB0110 /* ProfileViewController.swift in Sources */,
 				6796C224248A3250009ED7CD /* WaterMark.swift in Sources */,
 				67A49AA025787CA300A4DE61 /* CDCollectionHeader.swift in Sources */,
+				677409F425E3895B003BBE06 /* WebViewJavascriptBridge_JS.m in Sources */,
 				6796C228248A332A009ED7CD /* Constants.swift in Sources */,
 				6796C225248A3250009ED7CD /* LoadingView.swift in Sources */,
 				6730627D224DF7D40057799C /* AppDelegate.swift in Sources */,
@@ -560,6 +614,8 @@
 				6796C21B248A3221009ED7CD /* NetworkService.swift in Sources */,
 				67994FC02255DB7B00CB0110 /* ProfileCollectionViewCell.swift in Sources */,
 				676021EC244432490038921E /* WebViewController.swift in Sources */,
+				677409F225E3895B003BBE06 /* WKWebViewJavascriptBridge.m in Sources */,
+				677409F125E3895B003BBE06 /* WebViewJavascriptBridgeBase.m in Sources */,
 				67A49AA2257882AE00A4DE61 /* ViewControllerCollectionView1.swift in Sources */,
 				6796C21A248A3221009ED7CD /* OperationService.swift in Sources */,
 				6711193925148E2100BEAA2F /* AuteurTableViewController.swift in Sources */,
