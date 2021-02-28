@@ -12,6 +12,8 @@
 // 添加的SVGKit的类，方便我的swift直接调用
 #import "SVGKit.h"
 #import "SVGKImage.h"
+
+// 添加JSBridge类
 #import "WebViewJavascriptBridge.h"
 
 #endif /* OCHeader_h */
